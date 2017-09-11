@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -14,6 +15,7 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
@@ -21,6 +23,7 @@ public class PlayerScript : MonoBehaviour {
 		if (coll.gameObject.name == "DeathBlockPrefab")
 		{
 			Destroy(gameObject);
+			SceneManager.LoadScene("MainScene");
 		}
 	}
 
