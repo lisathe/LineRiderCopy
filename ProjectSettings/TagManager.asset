@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - DeathBlockPrefab
+  - Obstacle
   layers:
   - Default
   - TransparentFX

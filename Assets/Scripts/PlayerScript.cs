@@ -20,11 +20,18 @@ public class PlayerScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if (coll.gameObject.name == "DeathBlockPrefab" || coll.gameObject.name =="WallPrefab")
+		if (coll.gameObject.name == "DeathBlockPrefab")
 		{
 			Destroy(gameObject);
 			SceneManager.LoadScene("MainScene");
 		}
+
+        //sigh
+        if (coll.gameObject.tag =="Obstacle")
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene("MainScene");
+        }
 	}
 
     private void FixedUpdate()
