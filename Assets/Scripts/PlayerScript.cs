@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if (coll.gameObject.name == "DeathBlockPrefab")
+		if (coll.gameObject.name == "DeathBlockPrefab" || coll.gameObject.name =="WallPrefab")
 		{
 			Destroy(gameObject);
 		}
