@@ -32,6 +32,8 @@ public class PlayerScript : MonoBehaviour {
             Destroy(gameObject);
             SceneManager.LoadScene("MainScene");
         }
+
+
 	}
 
     private void FixedUpdate()
